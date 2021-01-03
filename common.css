@@ -37,6 +37,9 @@ body {
   transition: 0.50s;
   border-color: #7A0FEB;
 }
+.box input[type="text"]:focus::placeholder, .box input[type="password"]:focus::placeholder {
+  color: transparent;
+}
 .box input[type="submit"] {
   border: 0;
   background: none;
