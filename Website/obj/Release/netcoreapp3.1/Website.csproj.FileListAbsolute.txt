@@ -116,3 +116,11 @@ D:\webproject\Website\obj\Release\netcoreapp3.1\Website.csproj.CopyComplete
 D:\webproject\Website\obj\Release\netcoreapp3.1\Website.dll
 D:\webproject\Website\obj\Release\netcoreapp3.1\Website.pdb
 D:\webproject\Website\obj\Release\netcoreapp3.1\Website.genruntimeconfig.cache
+D:\webproject\Website\obj\Release\netcoreapp3.1\Website.csprojAssemblyReference.cache
+D:\webproject\Website\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\webproject\Website\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\webproject\Website\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\webproject\Website\bin\Release\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\webproject\Website\bin\Release\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\webproject\Website\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\webproject\Website\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

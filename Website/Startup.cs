@@ -8,29 +8,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Website.Models;
 
 namespace Website
 {
     public class Startup
     {
-        public const string COOKIE = "Cookies";
-
         public Startup()
         {
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>(config => config.UseInMemoryDatabase("MEMORY"))
+                .AddIdentity<ApplicationUser, IdentityRole<Guid>>(config =>
+                {
+                    config.Password.RequireDigit = false;
+                    config.Password.RequireLowercase = false;
+                    config.Password.RequireUppercase = false;
+                    config.Password.RequiredLength = 5;
+                    config.Password.RequireNonAlphanumeric = false;
+                }).AddEntityFrameworkStores<Context>();
             services.AddMvc();
-            services.AddAuthentication(COOKIE).AddCookie(COOKIE, b =>
+            services.ConfigureApplicationCookie(option =>
             {
-                b.AccessDeniedPath = "/Home/Denied";
-                b.LoginPath = "/Home/Login";
+                option.LoginPath = "/Home/Login";
             });
-            services.AddAuthorization(b => b.AddPolicy("Artem",
-                c => c.RequireAssertion(a => a.User.HasClaim(ClaimTypes.Name, "Rin"))));
-            services.AddDbContext<Context>(config => config.UseInMemoryDatabase("MEMORY"));
+            services.AddAuthorization();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

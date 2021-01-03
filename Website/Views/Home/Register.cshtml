@@ -87,9 +87,9 @@
 <body>
 <form class="box" asp-action="Register" asp-controller="Home" method="post">
     <h1> Регистрация </h1>
-    <input type="text" placeholder="Введите телефон или email" asp-for="Name">
-    <input type="text" placeholder="Введите имя пользователя">
-    <input type="password" placeholder="Введите пароль" asp-for="Password" >
+    <input type="text" placeholder="Введите телефон или email" asp-for="Email">
+    <input type="text" placeholder="Введите имя пользователя" asp-for="UserName">
+    <input type="password" placeholder="Введите пароль" asp-for="Password">
     <input type="password" placeholder="Повторите пароль">
     <input type="submit" value="Зарегистрироваться">
     <p class="question">Уже есть аккаунт? <a asp-action="Login" asp-controller="Home"> Войти</a></p>

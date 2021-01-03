@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Website.Models;
 
 namespace Website.Controllers
@@ -11,11 +10,14 @@ namespace Website.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private readonly Context _context;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
-        public HomeController(Context aContext)
+        public HomeController(UserManager<ApplicationUser> aManager,
+            SignInManager<ApplicationUser> aSignInManager)
         {
-            _context = aContext;
+            _userManager = aManager;
+            _signInManager = aSignInManager;
         }
 
         [AllowAnonymous]
@@ -34,31 +36,30 @@ namespace Website.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(ApplicationUser applicationUser)
         {
-            var user = _context.Users.SingleOrDefault(x =>
-                x.Name.Equals(applicationUser.Name) && x.Password.Equals(applicationUser.Password));
+            var user = await _userManager.FindByNameAsync(applicationUser.UserName);
+            if (user == null) return View(applicationUser);
 
-            if (user == null) return View("Login", applicationUser);
+            var result =
+                await _signInManager.PasswordSignInAsync(applicationUser.UserName, applicationUser.Password, false,
+                    false);
 
-            await HttpContext.SignInAsync(Startup.COOKIE,
-                new ClaimsPrincipal(new ClaimsIdentity(new[] {new Claim(ClaimTypes.Name, applicationUser.Name)},
-                    Startup.COOKIE)));
+            if (result.Succeeded) return RedirectToAction("SignIn");
 
-            return RedirectToAction("SignIn");
+            return View(applicationUser);
         }
 
         [HttpPost]
         [AllowAnonymous]
         public IActionResult Register(ApplicationUser applicationUser)
         {
-            _context.Users.AddAsync(applicationUser);
-            _context.SaveChanges();
+            var result= _userManager.CreateAsync(applicationUser, applicationUser.Password).GetAwaiter().GetResult();
 
             return RedirectToAction("Login");
         }
 
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
-            HttpContext.SignOutAsync(Startup.COOKIE);
+            await _signInManager.SignOutAsync();
             return View("Login");
         }
 
