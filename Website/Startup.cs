@@ -10,7 +10,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Website.Models;
+using Website.Areas.Welcome.Models;
 
 namespace Website
 {
@@ -32,10 +32,7 @@ namespace Website
                     config.Password.RequireNonAlphanumeric = false;
                 }).AddEntityFrameworkStores<Context>();
             services.AddMvc();
-            services.ConfigureApplicationCookie(option =>
-            {
-                option.LoginPath = "/Home/Login";
-            });
+            services.ConfigureApplicationCookie(option => { option.LoginPath = "/Areas/Welcome/Controllers/Home/Login"; });
             services.AddAuthorization();
         }
 
@@ -50,7 +47,7 @@ namespace Website
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Login}");
+                endpoints.MapControllerRoute("default", "{area=Welcome}/{controller=Home}/{action=Login}");
             });
         }
     }

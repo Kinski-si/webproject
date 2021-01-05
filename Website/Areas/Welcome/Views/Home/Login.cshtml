@@ -1,0 +1,19 @@
+﻿@model Website.Areas.Welcome.Models.ApplicationUser
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="/common.css">
+</head>
+<body>
+<form class="box" asp-action="Login" asp-controller="Home" method="post">
+    <h1> Вход </h1>
+    <input type="text" placeholder="Введите телефон или email" asp-for="UserName">
+    <input type="password" placeholder="Введите пароль" asp-for="Password">
+    <input type="submit" value="Войти">
+    <p class="question">Впервые у нас? <a asp-action="Register" asp-controller="Home">Зарегистрироваться</a></p>
+</form>
+</body>
+</html>
