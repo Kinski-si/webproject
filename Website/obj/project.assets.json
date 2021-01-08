@@ -2542,6 +2542,63 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Website.DAL.Contacts/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Website.DAL.Contacts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Website.DAL.Contacts.dll": {}
+        }
+      },
+      "Website.DAL.Implementations/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Website.DAL.Contacts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Website.DAL.Implementations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Website.DAL.Implementations.dll": {}
+        }
+      },
+      "Website.DAL.Migrations/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Website.DAL.Migrations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Website.DAL.Migrations.dll": {}
+        }
+      },
+      "Website.Domain.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Website.Domain.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Website.Domain.Contracts.dll": {}
+        }
+      },
+      "Website.Domain.Implementations/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Website.Domain.Implementations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Website.Domain.Implementations.dll": {}
+        }
       }
     }
   },
@@ -8201,6 +8258,31 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Website.DAL.Contacts/1.0.0": {
+      "type": "project",
+      "path": "../Website.DAL.Contacts/Website.DAL.Contacts.csproj",
+      "msbuildProject": "../Website.DAL.Contacts/Website.DAL.Contacts.csproj"
+    },
+    "Website.DAL.Implementations/1.0.0": {
+      "type": "project",
+      "path": "../Website.DAL.Implemetations/Website.DAL.Implementations.csproj",
+      "msbuildProject": "../Website.DAL.Implemetations/Website.DAL.Implementations.csproj"
+    },
+    "Website.DAL.Migrations/1.0.0": {
+      "type": "project",
+      "path": "../Website.DAL.Migrations/Website.DAL.Migrations.csproj",
+      "msbuildProject": "../Website.DAL.Migrations/Website.DAL.Migrations.csproj"
+    },
+    "Website.Domain.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Website.Domain.Contracts/Website.Domain.Contracts.csproj",
+      "msbuildProject": "../Website.Domain.Contracts/Website.Domain.Contracts.csproj"
+    },
+    "Website.Domain.Implementations/1.0.0": {
+      "type": "project",
+      "path": "../Website.Domain/Website.Domain.Implementations.csproj",
+      "msbuildProject": "../Website.Domain/Website.Domain.Implementations.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8210,7 +8292,12 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.1",
       "Microsoft.EntityFrameworkCore >= 5.0.1",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.1",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
+      "Website.DAL.Contacts >= 1.0.0",
+      "Website.DAL.Implementations >= 1.0.0",
+      "Website.DAL.Migrations >= 1.0.0",
+      "Website.Domain.Contracts >= 1.0.0",
+      "Website.Domain.Implementations >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8243,7 +8330,23 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\webproject\\Website.DAL.Contacts\\Website.DAL.Contacts.csproj": {
+              "projectPath": "D:\\webproject\\Website.DAL.Contacts\\Website.DAL.Contacts.csproj"
+            },
+            "D:\\webproject\\Website.DAL.Implemetations\\Website.DAL.Implementations.csproj": {
+              "projectPath": "D:\\webproject\\Website.DAL.Implemetations\\Website.DAL.Implementations.csproj"
+            },
+            "D:\\webproject\\Website.DAL.Migrations\\Website.DAL.Migrations.csproj": {
+              "projectPath": "D:\\webproject\\Website.DAL.Migrations\\Website.DAL.Migrations.csproj"
+            },
+            "D:\\webproject\\Website.Domain.Contracts\\Website.Domain.Contracts.csproj": {
+              "projectPath": "D:\\webproject\\Website.Domain.Contracts\\Website.Domain.Contracts.csproj"
+            },
+            "D:\\webproject\\Website.Domain\\Website.Domain.Implementations.csproj": {
+              "projectPath": "D:\\webproject\\Website.Domain\\Website.Domain.Implementations.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

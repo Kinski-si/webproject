@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Website.Areas.Welcome.Models;
+using Website.Areas.Welcome.ViewModels;
+using Website.Identity;
 
 namespace Website.Areas.Welcome.Controllers
 {
@@ -10,11 +11,11 @@ namespace Website.Areas.Welcome.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<UserModel> _userManager;
+        private readonly SignInManager<UserModel> _signInManager;
 
-        public HomeController(UserManager<ApplicationUser> aManager,
-            SignInManager<ApplicationUser> aSignInManager)
+        public HomeController(UserManager<UserModel> aManager,
+            SignInManager<UserModel> aSignInManager)
         {
             _userManager = aManager;
             _signInManager = aSignInManager;
@@ -34,25 +35,29 @@ namespace Website.Areas.Welcome.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(ApplicationUser applicationUser)
+        public async Task<IActionResult> Login(LoginViewModel aLoginModel)
         {
-            var user = await _userManager.FindByNameAsync(applicationUser.UserName);
-            if (user == null) return View(applicationUser);
+            var user = await _userManager.FindByNameAsync(aLoginModel.Name);
 
-            var result =
-                await _signInManager.PasswordSignInAsync(applicationUser.UserName, applicationUser.Password, false,
-                    false);
+            if (user == null) return View(aLoginModel);
 
-            if (result.Succeeded) return RedirectToAction("SignIn");
+            var result = await _signInManager.PasswordSignInAsync(aLoginModel.Name, aLoginModel.Password,
+                aLoginModel.RememberMe, false);
 
-            return View(applicationUser);
+            if (result.Succeeded) return RedirectToAction("LoggedIn");
+
+            return View(aLoginModel);
         }
 
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult Register(ApplicationUser applicationUser)
+        public async Task<IActionResult> Register(RegisterViewModel aRegisterViewModel)
         {
-            var result= _userManager.CreateAsync(applicationUser, applicationUser.Password).GetAwaiter().GetResult();
+            var result = await _userManager.CreateAsync(new UserModel
+            {
+                UserName = aRegisterViewModel.Name,
+                Email = aRegisterViewModel.Email,
+            }, aRegisterViewModel.Password);
 
             return RedirectToAction("Login");
         }
@@ -63,7 +68,7 @@ namespace Website.Areas.Welcome.Controllers
             return View("Login");
         }
 
-        public IActionResult SignIn()
+        public IActionResult LoggedIn()
         {
             return View();
         }

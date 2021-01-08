@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OhsgA1bUXYrjU+/O77hjxUm7WhLH2lbeOwvxHNSrXO5S+fAUdINA92YlAQJ4WbbJSh4NlBTGlX3eHPdzrJRYFg==",
+  "success": true,
+  "projectFilePath": "D:\\webproject\\Website.Domain.Contracts\\Website.Domain.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RinKokonoe\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\RinKokonoe\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

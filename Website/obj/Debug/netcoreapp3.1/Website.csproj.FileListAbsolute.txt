@@ -196,5 +196,15 @@ D:\webproject\Website\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Wor
 D:\webproject\Website\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Welcome\Views\Home\Login.cshtml.g.cs
 D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Welcome\Views\Home\Register.cshtml.g.cs
-D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Welcome\Views\Home\SignIn.cshtml.g.cs
 D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Welcome\Views\_ViewImports.cshtml.g.cs
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.DAL.Contacts.dll
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.DAL.Implementations.dll
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.DAL.Migrations.dll
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.Domain.Contracts.dll
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.Domain.Implementations.dll
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.DAL.Contacts.pdb
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.DAL.Implementations.pdb
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.DAL.Migrations.pdb
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.Domain.Contracts.pdb
+D:\webproject\Website\bin\Debug\netcoreapp3.1\Website.Domain.Implementations.pdb
+D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Welcome\Views\Home\LoggedIn.cshtml.g.cs

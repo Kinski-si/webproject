@@ -30,6 +30,11 @@
           "Microsoft.EntityFrameworkCore": "5.0.1",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
+          "Website.DAL.Contacts": "1.0.0",
+          "Website.DAL.Implementations": "1.0.0",
+          "Website.DAL.Migrations": "1.0.0",
+          "Website.Domain.Contracts": "1.0.0",
+          "Website.Domain.Implementations": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies.Reference": "3.1.0.0",
@@ -2080,6 +2085,53 @@
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
+        }
+      },
+      "Website.DAL.Contacts/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "runtime": {
+          "Website.DAL.Contacts.dll": {}
+        },
+        "compile": {
+          "Website.DAL.Contacts.dll": {}
+        }
+      },
+      "Website.DAL.Implementations/1.0.0": {
+        "dependencies": {
+          "Website.DAL.Contacts": "1.0.0"
+        },
+        "runtime": {
+          "Website.DAL.Implementations.dll": {}
+        },
+        "compile": {
+          "Website.DAL.Implementations.dll": {}
+        }
+      },
+      "Website.DAL.Migrations/1.0.0": {
+        "runtime": {
+          "Website.DAL.Migrations.dll": {}
+        },
+        "compile": {
+          "Website.DAL.Migrations.dll": {}
+        }
+      },
+      "Website.Domain.Contracts/1.0.0": {
+        "runtime": {
+          "Website.Domain.Contracts.dll": {}
+        },
+        "compile": {
+          "Website.Domain.Contracts.dll": {}
+        }
+      },
+      "Website.Domain.Implementations/1.0.0": {
+        "runtime": {
+          "Website.Domain.Implementations.dll": {}
+        },
+        "compile": {
+          "Website.Domain.Implementations.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4826,6 +4878,31 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Website.DAL.Contacts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Website.DAL.Implementations/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Website.DAL.Migrations/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Website.Domain.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Website.Domain.Implementations/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

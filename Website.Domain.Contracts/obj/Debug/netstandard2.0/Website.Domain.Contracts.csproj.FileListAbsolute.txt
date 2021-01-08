@@ -1,0 +1,9 @@
+D:\webproject\Website.Domain.Contracts\bin\Debug\netstandard2.0\Website.Domain.Contracts.deps.json
+D:\webproject\Website.Domain.Contracts\bin\Debug\netstandard2.0\Website.Domain.Contracts.dll
+D:\webproject\Website.Domain.Contracts\bin\Debug\netstandard2.0\Website.Domain.Contracts.pdb
+D:\webproject\Website.Domain.Contracts\obj\Debug\netstandard2.0\Website.Domain.Contracts.csprojAssemblyReference.cache
+D:\webproject\Website.Domain.Contracts\obj\Debug\netstandard2.0\Website.Domain.Contracts.AssemblyInfoInputs.cache
+D:\webproject\Website.Domain.Contracts\obj\Debug\netstandard2.0\Website.Domain.Contracts.AssemblyInfo.cs
+D:\webproject\Website.Domain.Contracts\obj\Debug\netstandard2.0\Website.Domain.Contracts.csproj.CoreCompileInputs.cache
+D:\webproject\Website.Domain.Contracts\obj\Debug\netstandard2.0\Website.Domain.Contracts.dll
+D:\webproject\Website.Domain.Contracts\obj\Debug\netstandard2.0\Website.Domain.Contracts.pdb

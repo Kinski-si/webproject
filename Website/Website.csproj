@@ -15,13 +15,15 @@
 
   <ItemGroup>
     <Folder Include="Areas\ClothingStore\Controllers\" />
-    <Folder Include="Areas\ClothingStore\Data\" />
-    <Folder Include="Areas\ClothingStore\Models\" />
     <Folder Include="Areas\ClothingStore\Views\" />
-    <Folder Include="Areas\CMS\Controllers\" />
-    <Folder Include="Areas\CMS\Data\" />
-    <Folder Include="Areas\CMS\Models\" />
-    <Folder Include="Areas\CMS\Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Website.DAL.Contacts\Website.DAL.Contacts.csproj" />
+    <ProjectReference Include="..\Website.DAL.Implemetations\Website.DAL.Implementations.csproj" />
+    <ProjectReference Include="..\Website.DAL.Migrations\Website.DAL.Migrations.csproj" />
+    <ProjectReference Include="..\Website.Domain.Contracts\Website.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\Website.Domain\Website.Domain.Implementations.csproj" />
   </ItemGroup>
 
 </Project>

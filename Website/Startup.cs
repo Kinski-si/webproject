@@ -1,38 +1,36 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Website.Areas.Welcome.Models;
+using Website.Contexts;
+using Website.Identity;
 
 namespace Website
 {
     public class Startup
     {
-        public Startup()
-        {
-        }
-
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Context>(config => config.UseInMemoryDatabase("MEMORY"))
-                .AddIdentity<ApplicationUser, IdentityRole<Guid>>(config =>
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+            services.AddDbContext<UserContext>(config =>
+                    config.UseInMemoryDatabase("MEMORY"))
+                .AddIdentity<UserModel, IdentityRole<Guid>>(config =>
                 {
                     config.Password.RequireDigit = false;
                     config.Password.RequireLowercase = false;
                     config.Password.RequireUppercase = false;
                     config.Password.RequiredLength = 5;
                     config.Password.RequireNonAlphanumeric = false;
-                }).AddEntityFrameworkStores<Context>();
+                }).AddEntityFrameworkStores<UserContext>();
             services.AddMvc();
-            services.ConfigureApplicationCookie(option => { option.LoginPath = "/Areas/Welcome/Controllers/Home/Login"; });
+            services.ConfigureApplicationCookie(option =>
+            {
+                option.LoginPath = "/Areas/Welcome/Controllers/Home/Login";
+            });
             services.AddAuthorization();
         }
 
@@ -44,6 +42,7 @@ namespace Website
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

@@ -1,0 +1,9 @@
+D:\webproject\Website.DAL.Migrations\bin\Debug\netstandard2.0\Website.DAL.Migrations.deps.json
+D:\webproject\Website.DAL.Migrations\bin\Debug\netstandard2.0\Website.DAL.Migrations.dll
+D:\webproject\Website.DAL.Migrations\bin\Debug\netstandard2.0\Website.DAL.Migrations.pdb
+D:\webproject\Website.DAL.Migrations\obj\Debug\netstandard2.0\Website.DAL.Migrations.csprojAssemblyReference.cache
+D:\webproject\Website.DAL.Migrations\obj\Debug\netstandard2.0\Website.DAL.Migrations.AssemblyInfoInputs.cache
+D:\webproject\Website.DAL.Migrations\obj\Debug\netstandard2.0\Website.DAL.Migrations.AssemblyInfo.cs
+D:\webproject\Website.DAL.Migrations\obj\Debug\netstandard2.0\Website.DAL.Migrations.csproj.CoreCompileInputs.cache
+D:\webproject\Website.DAL.Migrations\obj\Debug\netstandard2.0\Website.DAL.Migrations.dll
+D:\webproject\Website.DAL.Migrations\obj\Debug\netstandard2.0\Website.DAL.Migrations.pdb

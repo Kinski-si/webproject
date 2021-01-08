@@ -1,0 +1,12 @@
+D:\webproject\Website.DAL.Implemetations\obj\Debug\netstandard2.0\Website.DAL.Implementations.csprojAssemblyReference.cache
+D:\webproject\Website.DAL.Implemetations\obj\Debug\netstandard2.0\Website.DAL.Implementations.AssemblyInfoInputs.cache
+D:\webproject\Website.DAL.Implemetations\obj\Debug\netstandard2.0\Website.DAL.Implementations.AssemblyInfo.cs
+D:\webproject\Website.DAL.Implemetations\obj\Debug\netstandard2.0\Website.DAL.Implementations.csproj.CoreCompileInputs.cache
+D:\webproject\Website.DAL.Implemetations\bin\Debug\netstandard2.0\Website.DAL.Implementations.deps.json
+D:\webproject\Website.DAL.Implemetations\bin\Debug\netstandard2.0\Website.DAL.Implementations.dll
+D:\webproject\Website.DAL.Implemetations\bin\Debug\netstandard2.0\Website.DAL.Implementations.pdb
+D:\webproject\Website.DAL.Implemetations\bin\Debug\netstandard2.0\Website.DAL.Contacts.dll
+D:\webproject\Website.DAL.Implemetations\bin\Debug\netstandard2.0\Website.DAL.Contacts.pdb
+D:\webproject\Website.DAL.Implemetations\obj\Debug\netstandard2.0\Website.DAL.Implementations.csproj.CopyComplete
+D:\webproject\Website.DAL.Implemetations\obj\Debug\netstandard2.0\Website.DAL.Implementations.dll
+D:\webproject\Website.DAL.Implemetations\obj\Debug\netstandard2.0\Website.DAL.Implementations.pdb

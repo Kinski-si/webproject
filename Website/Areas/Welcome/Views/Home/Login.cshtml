@@ -1,19 +1,21 @@
-﻿@model Website.Areas.Welcome.Models.ApplicationUser
+﻿@model Website.Areas.Welcome.ViewModels.LoginViewModel
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/login.css">
-    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/css/Identity/login.css">
+    <link rel="stylesheet" href="/css/Identity/common.css">
 </head>
 <body>
 <form class="box" asp-action="Login" asp-controller="Home" method="post">
     <h1> Вход </h1>
-    <input type="text" placeholder="Введите телефон или email" asp-for="UserName">
+    <input type="text" placeholder="Введите телефон или email" asp-for="Name">
     <input type="password" placeholder="Введите пароль" asp-for="Password">
     <input type="submit" value="Войти">
-    <p class="question">Впервые у нас? <a asp-action="Register" asp-controller="Home">Зарегистрироваться</a></p>
+    <p class="question">Впервые у нас? <a asp-action="Register" asp-controller="Home">
+        Зарегистрироваться
+    </a></p>
 </form>
 </body>
 </html>

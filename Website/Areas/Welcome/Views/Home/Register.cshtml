@@ -1,19 +1,19 @@
-﻿@model Website.Areas.Welcome.Models.ApplicationUser
+﻿@model Website.Areas.Welcome.ViewModels.RegisterViewModel
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/register.css">
-    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/css/Identity/register.css">
+    <link rel="stylesheet" href="/css/Identity/common.css">
 </head>
 <body>
 <form class="box" asp-action="Register" asp-controller="Home" method="post">
     <h1> Регистрация </h1>
     <input type="text" placeholder="Введите телефон или email" asp-for="Email">
-    <input type="text" placeholder="Введите имя пользователя" asp-for="UserName">
+    <input type="text" placeholder="Введите имя пользователя" asp-for="Name">
     <input type="password" placeholder="Введите пароль" asp-for="Password">
-    <input type="password" placeholder="Повторите пароль">
+    <input type="password" placeholder="Повторите пароль" asp-for="ConfirmPassword">
     <input type="submit" value="Зарегистрироваться">
     <p class="question">Уже есть аккаунт? <a asp-action="Login" asp-controller="Home"> Войти</a></p>
 </form>
