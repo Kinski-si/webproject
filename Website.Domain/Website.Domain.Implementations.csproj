@@ -1,7 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Website.DAL.Contacts\Website.DAL.Contacts.csproj" />
+    <ProjectReference Include="..\Website.DAL.Implemetations\Website.DAL.Implementations.csproj" />
+    <ProjectReference Include="..\Website.Domain.Contracts\Website.Domain.Contracts.csproj" />
+  </ItemGroup>
 
 </Project>

@@ -5,8 +5,10 @@ using Microsoft.Extensions.Hosting;
 using System;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Website.Contexts;
-using Website.Identity;
+using Website.DAL.Contacts.Entities;
+using Website.DAL.Implementations;
+using Website.Domain.Contracts;
+using Website.Domain.Implementations;
 
 namespace Website
 {
@@ -16,22 +18,27 @@ namespace Website
         {
             services.AddDistributedMemoryCache();
             services.AddSession();
-            services.AddDbContext<UserContext>(config =>
+            services.AddDbContext<Context>(config =>
                     config.UseInMemoryDatabase("MEMORY"))
-                .AddIdentity<UserModel, IdentityRole<Guid>>(config =>
+                .AddIdentity<EntityUser, IdentityRole<Guid>>(config =>
                 {
                     config.Password.RequireDigit = false;
                     config.Password.RequireLowercase = false;
                     config.Password.RequireUppercase = false;
                     config.Password.RequiredLength = 5;
                     config.Password.RequireNonAlphanumeric = false;
-                }).AddEntityFrameworkStores<UserContext>();
+                }).AddEntityFrameworkStores<Context>();
             services.AddMvc();
             services.ConfigureApplicationCookie(option =>
             {
                 option.LoginPath = "/Areas/Welcome/Controllers/Home/Login";
             });
+            services.AddSingleton(
+                new AutoMapper.MapperConfiguration(cfgr =>
+                    cfgr.AddProfile(new AutoMapperConfiguration())).CreateMapper());
+            services.AddScoped<IAuthorizeService, AuthorizeService>();
             services.AddAuthorization();
+            services.AddMemoryCache();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

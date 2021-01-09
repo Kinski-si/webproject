@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Website.Areas.Welcome.ViewModels;
-using Website.Identity;
+using Website.Domain.Contracts;
+using Website.Domain.Contracts.Models;
 
 namespace Website.Areas.Welcome.Controllers
 {
@@ -11,14 +10,11 @@ namespace Website.Areas.Welcome.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private readonly UserManager<UserModel> _userManager;
-        private readonly SignInManager<UserModel> _signInManager;
+        private readonly IAuthorizeService _authorizeService;
 
-        public HomeController(UserManager<UserModel> aManager,
-            SignInManager<UserModel> aSignInManager)
+        public HomeController(IAuthorizeService aAuthorizeService)
         {
-            _userManager = aManager;
-            _signInManager = aSignInManager;
+            _authorizeService = aAuthorizeService;
         }
 
         [AllowAnonymous]
@@ -37,12 +33,11 @@ namespace Website.Areas.Welcome.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel aLoginModel)
         {
-            var user = await _userManager.FindByNameAsync(aLoginModel.Name);
+            var user = await _authorizeService.FindByNameAsync(aLoginModel);
 
             if (user == null) return View(aLoginModel);
 
-            var result = await _signInManager.PasswordSignInAsync(aLoginModel.Name, aLoginModel.Password,
-                aLoginModel.RememberMe, false);
+            var result = await _authorizeService.LogInUserAsync(user, aLoginModel);
 
             if (result.Succeeded) return RedirectToAction("LoggedIn");
 
@@ -53,18 +48,13 @@ namespace Website.Areas.Welcome.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterViewModel aRegisterViewModel)
         {
-            var result = await _userManager.CreateAsync(new UserModel
-            {
-                UserName = aRegisterViewModel.Name,
-                Email = aRegisterViewModel.Email,
-            }, aRegisterViewModel.Password);
-
+            await _authorizeService.RegisterUserAsync(aRegisterViewModel);
             return RedirectToAction("Login");
         }
 
         public async Task<IActionResult> Logout()
         {
-            await _signInManager.SignOutAsync();
+            await _authorizeService.LogoutUserAsync();
             return View("Login");
         }
 

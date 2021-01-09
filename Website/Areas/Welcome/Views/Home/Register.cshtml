@@ -1,4 +1,4 @@
-﻿@model Website.Areas.Welcome.ViewModels.RegisterViewModel
+﻿@model Website.Domain.Contracts.Models.RegisterViewModel
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -11,7 +11,7 @@
 <form class="box" asp-action="Register" asp-controller="Home" method="post">
     <h1> Регистрация </h1>
     <input type="text" placeholder="Введите телефон или email" asp-for="Email">
-    <input type="text" placeholder="Введите имя пользователя" asp-for="Name">
+    <input type="text" placeholder="Введите имя пользователя" asp-for="UserName">
     <input type="password" placeholder="Введите пароль" asp-for="Password">
     <input type="password" placeholder="Повторите пароль" asp-for="ConfirmPassword">
     <input type="submit" value="Зарегистрироваться">
