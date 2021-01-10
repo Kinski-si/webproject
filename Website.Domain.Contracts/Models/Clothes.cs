@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Website.Domain.Contracts.Models
 {
-    public class Clothes
+    public class Clothes : ShopModelBase
     {
-        public Guid Id { get; set; }
-
         [Required(ErrorMessage = "Имя товара не может быть пустым")]
         [StringLength(20)]
         public string Name { get; set; }

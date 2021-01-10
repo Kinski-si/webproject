@@ -27,4 +27,9 @@
     <ProjectReference Include="..\Website.Domain\Website.Domain.Implementations.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Manage\Data\" />
+    <Folder Include="Areas\Manage\Models\" />
+  </ItemGroup>
+
 </Project>

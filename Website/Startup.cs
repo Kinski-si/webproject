@@ -32,6 +32,7 @@ namespace Website
             services.ConfigureApplicationCookie(option =>
             {
                 option.LoginPath = "/Welcome/Home/Login";
+                option.AccessDeniedPath = "/Welcome/Home/Denied";
             });
             services.AddSingleton(
                 new AutoMapper.MapperConfiguration(cfgr =>

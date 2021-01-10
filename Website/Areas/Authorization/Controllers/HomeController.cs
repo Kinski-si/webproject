@@ -66,5 +66,10 @@ namespace Website.Areas.Authorization.Controllers
         {
             return View();
         }
+
+        public string Denied()
+        {
+            return "You don't have an access to this page.";
+        }
     }
 }

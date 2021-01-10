@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Website.Domain.Contracts.Models
 {
-    public class Category
+    public class Category : ShopModelBase
     {
-        public Guid Id { get; set; }
-
         public string CategoryName { get; set; }
 
         public string CategoryDescription { get; set; }
