@@ -33,6 +33,8 @@ namespace Website.Areas.Welcome.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel aLoginModel)
         {
+            if (!ModelState.IsValid) return View(aLoginModel);
+
             var user = await _authorizeService.FindByModelAsync(aLoginModel);
 
             if (user == null) return View(aLoginModel);
@@ -48,10 +50,7 @@ namespace Website.Areas.Welcome.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterViewModel aRegisterViewModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(aRegisterViewModel);
-            }
+            if (!ModelState.IsValid) return View(aRegisterViewModel);
 
             await _authorizeService.RegisterUserAsync(aRegisterViewModel);
             return RedirectToAction("Login");
