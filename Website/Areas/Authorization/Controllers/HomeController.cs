@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Website.Domain.Contracts;
 using Website.Domain.Contracts.Models;
 
-namespace Website.Areas.Welcome.Controllers
+namespace Website.Areas.Authorization.Controllers
 {
-    [Area("Welcome")]
+    [Area("Authorization")]
     [Authorize]
     public class HomeController : Controller
     {

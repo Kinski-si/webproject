@@ -31,7 +31,7 @@ namespace Website
             services.AddMvc();
             services.ConfigureApplicationCookie(option =>
             {
-                option.LoginPath = "/Areas/Welcome/Controllers/Home/Login";
+                option.LoginPath = "/Welcome/Home/Login";
             });
             services.AddSingleton(
                 new AutoMapper.MapperConfiguration(cfgr =>
@@ -53,7 +53,7 @@ namespace Website
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("default", "{area=Welcome}/{controller=Home}/{action=Login}");
+                endpoints.MapControllerRoute("default", "{area=Authorization}/{controller=Home}/{action=Login}");
             });
         }
     }
