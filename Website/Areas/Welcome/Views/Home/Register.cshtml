@@ -11,8 +11,11 @@
 <form class="box" asp-action="Register" asp-controller="Home" method="post">
     <h1> Регистрация </h1>
     <input type="text" placeholder="Введите телефон или email" asp-for="Email">
+    <span asp-validation-for="Email"></span>
     <input type="text" placeholder="Введите имя пользователя" asp-for="UserName">
+    <span asp-validation-for="UserName"></span>
     <input type="password" placeholder="Введите пароль" asp-for="Password">
+    <span asp-validation-for="Password"></span>
     <input type="password" placeholder="Повторите пароль" asp-for="ConfirmPassword">
     <input type="submit" value="Зарегистрироваться">
     <p class="question">Уже есть аккаунт? <a asp-action="Login" asp-controller="Home"> Войти</a></p>

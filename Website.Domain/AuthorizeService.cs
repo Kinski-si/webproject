@@ -31,10 +31,11 @@ namespace Website.Domain.Implementations
             await _context.SaveChangesAsync();
         }
 
-        public async Task<EntityUser> FindByNameAsync(LoginViewModel aLoginViewModel)
+        public async Task<EntityUser> FindByModelAsync(LoginViewModel aLoginViewModel)
         {
             return await _userManager.FindByNameAsync(aLoginViewModel.Name);
         }
+
 
         public async Task<SignInResult> LogInUserAsync(EntityUser aEntityUser, LoginViewModel aLoginViewModel)
         {

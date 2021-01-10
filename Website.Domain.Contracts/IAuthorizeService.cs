@@ -9,7 +9,7 @@ namespace Website.Domain.Contracts
     {
         Task RegisterUserAsync(RegisterViewModel aRegisterViewModel); 
         Task LogoutUserAsync();
-        Task<EntityUser> FindByNameAsync(LoginViewModel aLoginViewModel);
+        Task<EntityUser> FindByModelAsync(LoginViewModel aLoginViewModel);
         Task<SignInResult> LogInUserAsync(EntityUser aEntityUser, LoginViewModel aLoginViewModel);
     }
 }

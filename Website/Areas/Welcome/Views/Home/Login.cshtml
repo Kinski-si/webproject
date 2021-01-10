@@ -11,7 +11,10 @@
 <form class="box" asp-action="Login" asp-controller="Home" method="post">
     <h1> Вход </h1>
     <input type="text" placeholder="Введите телефон или email" asp-for="Name">
+    <span asp-validation-for="Name"></span>
     <input type="password" placeholder="Введите пароль" asp-for="Password">
+    <span asp-validation-for="Password"></span>
+    <input type="checkbox" asp-for="RememberMe"/><a>Запомнить меня</a>
     <input type="submit" value="Войти">
     <p class="question">Впервые у нас? <a asp-action="Register" asp-controller="Home">
         Зарегистрироваться

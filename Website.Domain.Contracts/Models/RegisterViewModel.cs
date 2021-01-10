@@ -4,7 +4,8 @@ namespace Website.Domain.Contracts.Models
 {
     public class RegisterViewModel
     {
-        [EmailAddress] public string Email { get; set; }
+        [EmailAddress(ErrorMessage = "Указанный вами адресс электронной почты имеет неверный формат")]
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Укажите ваше имя")]
         [StringLength(14, ErrorMessage = "Максимальное количество символов не должно превышать 14")]
