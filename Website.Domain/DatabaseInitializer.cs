@@ -32,8 +32,6 @@ namespace Website.Domain.Implementations
                 {
                     await aUserManager.AddToRoleAsync(admin, Roles.ADMIN);
                 }
-
-                
             }
         }
     }

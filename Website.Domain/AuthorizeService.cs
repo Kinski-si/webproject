@@ -36,7 +36,6 @@ namespace Website.Domain.Implementations
             return await _userManager.FindByNameAsync(aLoginViewModel.Name);
         }
 
-
         public async Task<SignInResult> LogInUserAsync(EntityUser aEntityUser, LoginViewModel aLoginViewModel)
         {
             return await _signInManager.PasswordSignInAsync(aEntityUser, aLoginViewModel.Password,

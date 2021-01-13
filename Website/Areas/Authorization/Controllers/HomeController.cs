@@ -64,7 +64,7 @@ namespace Website.Areas.Authorization.Controllers
 
         public IActionResult LoggedIn()
         {
-            return View();
+            return RedirectToAction("Welcome", "Main", new {area = "Shop"});
         }
 
         public string Denied()

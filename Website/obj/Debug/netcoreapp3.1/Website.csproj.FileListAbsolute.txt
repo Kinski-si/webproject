@@ -198,3 +198,8 @@ D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Authorization\Views\Ho
 D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Authorization\Views\Home\Login.cshtml.g.cs
 D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Authorization\Views\Home\Register.cshtml.g.cs
 D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Authorization\Views\_ViewImports.cshtml.g.cs
+D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Admin\Main.cshtml.g.cs
+D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\Admin\CreateCategory.cshtml.g.cs
+D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Manage\Views\_ViewImports.cshtml.g.cs
+D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Shop\Views\Main\Welcome.cshtml.g.cs
+D:\webproject\Website\obj\Debug\netcoreapp3.1\Razor\Areas\Shop\Views\_ViewImports.cshtml.g.cs

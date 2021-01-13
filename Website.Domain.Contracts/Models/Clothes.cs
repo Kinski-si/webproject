@@ -35,10 +35,5 @@ namespace Website.Domain.Contracts.Models
         public float Price { get; set; }
 
         public bool IsFavourite { get; set; }
-
-        public Clothes()
-        {
-            Id = Guid.NewGuid();
-        }
     }
 }

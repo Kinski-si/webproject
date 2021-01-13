@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Website.DAL.Contacts;
 using Website.DAL.Contacts.Entities;
 using Website.DAL.Implementations;
 using Website.Domain.Contracts;
@@ -31,13 +32,15 @@ namespace Website
             services.AddMvc();
             services.ConfigureApplicationCookie(option =>
             {
-                option.LoginPath = "/Welcome/Home/Login";
-                option.AccessDeniedPath = "/Welcome/Home/Denied";
+                option.LoginPath = "/Authorization/Home/Login";
+                option.AccessDeniedPath = "/Authorization/Home/Denied";
             });
             services.AddSingleton(
                 new AutoMapper.MapperConfiguration(cfgr =>
                     cfgr.AddProfile(new AutoMapperConfiguration())).CreateMapper());
             services.AddScoped<IAuthorizeService, AuthorizeService>();
+            services.AddScoped<IManageService, ManageService>();
+            services.AddScoped<IDbRepository, DbRepository>();
             services.AddAuthorization();
             services.AddMemoryCache();
         }

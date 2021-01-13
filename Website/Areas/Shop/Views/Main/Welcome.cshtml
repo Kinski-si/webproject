@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Category>
+
+@foreach (var category in Model)
+{
+    <a>@category.CategoryName</a>
+    <br/>
+    <a>@category.CategoryDescription</a>
+    <br/>
+    foreach (var cloth in @category?.Clothes ?? Enumerable.Empty<Clothes>())
+    {
+        <a>@cloth.CategoryName</a>
+        <a>@cloth.Img</a>
+        <a>@cloth.Brand</a>
+        <a>@cloth.MaterialType</a>
+        <a>@cloth.Price</a>
+        <a>@cloth.IsFavourite</a>
+    }
+}
