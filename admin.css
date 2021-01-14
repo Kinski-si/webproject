@@ -75,8 +75,9 @@ body {
   flex-direction: column;
   display: none;
   background: #262626;
-  height: 500px;
+  height: auto;
   cursor: pointer;
+  text-align: center;
 }
 
 .visible {
@@ -85,22 +86,6 @@ body {
 
 .unvisible {
   display: none;
-}
-table {
-  margin: 20px;
-  text-align: center;
-  background: #262626;
-  opacity: 0.9;
-  box-shadow: 0 0 0 2px rgba(48,48,48,0.5);
-
-}
-.name-category {
-  border-bottom: 2px solid #303030;
-  font-size: 1.2em;
-}
-td {
-  padding: 10px;
-  color: white;
 }
 .change-category,
 .delete-category {
@@ -111,5 +96,8 @@ td {
   background: #4A4A4A;
   opacity: 0.9;
   color: white;
-
+}
+.hidden-wrapper h3 {
+  color: white;
+  font-weight: 100;
 }

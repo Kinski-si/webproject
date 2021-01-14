@@ -3,5 +3,19 @@
 }
 
 .box input[type="submit"] {
-  padding: 14px 40px;
+  padding: 14px 35px;
+}
+.field-validation-valid {
+	color: #8F0507;
+	font-size: 0.9em;
+	font-weight: 600;
+}
+
+input [type="checkbox"] {
+	position: absolute;
+}
+.remember-me {
+	color: #F8F8FC;
+	font-size: 0.9em;
+	cursor:default;
 }

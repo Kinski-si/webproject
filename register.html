@@ -6,14 +6,17 @@
   <link rel="stylesheet" href="common.css">
 </head>
 <body>
-<form class="box" action="index.html" method="post">
-  <h1> Регистрация </h1>
-  <input type="text" name="" placeholder="Введите телефон или email">
-  <input type="text" name="" placeholder="Введите имя пользователя">
-  <input type="password" name="" placeholder="Введите пароль">
-  <input type="password" name="" placeholder="Повторите пароль">
-  <input type="submit" name="" value="Зарегистрироваться">
-  <p class="question">Уже есть аккаунт? <a href="#"> Войти</a></p>
+<form class="box" asp-action="Register" asp-controller="Home" method="post">
+    <h1> Регистрация </h1>
+    <input type="text" placeholder="Введите телефон или email" asp-for="Email">
+    <span class="field-validation-valid" asp-validation-for="Email"></span>
+    <input type="text" placeholder="Введите имя пользователя" asp-for="UserName">
+    <span class="field-validation-valid" asp-validation-for="UserName"></span>
+    <input type="password" placeholder="Введите пароль" asp-for="Password">
+    <span class="field-validation-valid" asp-validation-for="Password"></span>
+    <input type="password" placeholder="Повторите пароль" asp-for="ConfirmPassword">
+    <input type="submit" value="Зарегистрироваться">
+    <p class="question">Уже есть аккаунт? <a asp-action="Login" asp-controller="Home"> Войти</a></p>
 </form>
 </body>
 </html>

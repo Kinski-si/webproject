@@ -23,9 +23,10 @@ body {
   font-size: 1.4em;
 }
 .image {
-  width: 80px;
-  height: 80px;
-  background: url(https://www.brimbank.vic.gov.au/sites/default/files/tick.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  background-image: url('check-mark.png');
+  background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   top:50%;
