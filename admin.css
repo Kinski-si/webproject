@@ -1,19 +1,19 @@
 body {
-    background: #D3D3D3;
-	font-family: sans-serif;
+    background: url(https://www.meme-arsenal.com/memes/2fafdcdbaa9eef3ae646064dd6e7666e.jpg);
+	  font-family: sans-serif;
 }
 .blocks {
-	display: flex;
-	position: relative;
+	  display: flex;
+	  position: relative;
     top:50%;
     left: 50%;
-    transform: translate(-50%, 100px);
-	width: 90%;
-	height: auto;
-	background: #222;
-	flex-direction: column;
-	margin: 0;
-	padding: 0;
+    transform: translate(-50%, 150px);
+	  width: 70%;
+	  height: auto;
+	  background: #222;
+	  flex-direction: column;
+	  margin: 0;
+	  padding: 0;
 }
 .block{
 	  display: flex;
@@ -33,26 +33,26 @@ body {
 .open-categories:hover,
 .show-all:hover,
 .hide-all:hover{
-	background: #1B1B1B;
-	transition: 0.8s;
+	  background: #1B1B1B;
+	  transition: 0.8s;
 }
 
 .block::after{
-  content:'';
-  position: absolute;
-  z-index: -1;
-  top: -.225em;
-  left: -.225em;
-  width: calc(100% + .45em);
-  height: calc(100% + .45em);
-  border-radius: .25em;
-  background-image: linear-gradient(45deg,#9910AD, #9114D2, #8514D2, #2414D2, #1452D2);
-  background-size: 200%;
-  animation: animateborder 3s ease infinite;
+    content:'';
+    position: absolute;
+    z-index: -1;
+    top: -.225em;
+    left: -.225em;
+    width: calc(100% + .45em);
+    height: calc(100% + .45em);
+    border-radius: .25em;
+    background-image: linear-gradient(45deg,#9910AD, #9114D2, #8514D2, #2414D2, #1452D2);
+    background-size: 200%;
+    animation: animateborder 3s ease infinite;
 }
 
 .block:hover::after{
-  animation-play-state: running;
+    animation-play-state: running;
 }
 
 @keyframes animateborder {
@@ -68,36 +68,44 @@ body {
 }
 
 .hide-all {
-  display: none;
+   display: none;
 }
 
 .hidden-wrapper {
-  flex-direction: column;
-  display: none;
-  background: #262626;
-  height: auto;
-  cursor: pointer;
-  text-align: center;
+   flex-direction: column;
+   display: none;
+   background: #262626;
+   height: auto;
+   padding: 20px;
 }
 
 .visible {
-  display: flex;
+   display: flex;
 }
 
 .unvisible {
-  display: none;
+   display: none;
 }
-.change-category,
-.delete-category {
-  width: 200px;
-  height: 60px;
-  margin: 15px 30px;
-  font-size: 1em;
-  background: #4A4A4A;
-  opacity: 0.9;
-  color: white;
+.block-inside {
+   display: flex;
+   margin: 0;
+   border-bottom: 1px solid #999;
+   color: white;
+   font-weight: 100;
+   font-size: 0.9em;
+   text-transform: uppercase;
 }
-.hidden-wrapper h3 {
-  color: white;
-  font-weight: 100;
+.btn {
+  border: none;
+  background: #D7D7D7;
+  margin: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  box-shadow: 0px 2px 2px 1px rgba(80,80,80,0.9) inset;
+}
+.btn:hover {
+  background: #BEBEBE;
+}
+.btn:focus {
+    outline: none;
 }
