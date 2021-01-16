@@ -2,7 +2,7 @@
 
 namespace Website.Domain.Contracts.Models
 {
-    public class Category : ShopModelBase
+    public class Category : ModelBase
     {
         public string CategoryName { get; set; }
 

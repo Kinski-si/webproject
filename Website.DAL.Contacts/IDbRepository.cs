@@ -8,13 +8,13 @@ namespace Website.DAL.Contacts
 {
     public interface IDbRepository
     {
-        IQueryable<T> Get<T>() where T : class, IEntity;
+        Task<T> Get<T>(Guid aId) where T : class, IEntity;
 
         Task<Guid> Add<T>(T newEntity) where T : class, IEntity;
 
         Task AddRange<T>(IEnumerable<T> newEntities) where T : class, IEntity;
 
-        Task Delete<T>(Guid id) where T : class, IEntity;
+        Task Remove<T>(Guid id) where T : class, IEntity;
 
         Task Remove<T>(T entity) where T : class, IEntity;
 

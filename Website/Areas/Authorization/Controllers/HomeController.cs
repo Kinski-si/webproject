@@ -31,15 +31,15 @@ namespace Website.Areas.Authorization.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel aLoginModel)
+        public async Task<IActionResult> Login(LoginForm aLoginModel)
         {
             if (!ModelState.IsValid) return View(aLoginModel);
 
-            var user = await _authorizeService.FindByModelAsync(aLoginModel);
+            var user = await _authorizeService.FindUser(aLoginModel);
 
             if (user == null) return View(aLoginModel);
 
-            var result = await _authorizeService.LogInUserAsync(user, aLoginModel);
+            var result = await _authorizeService.SignInUserAsync(user, aLoginModel);
 
             if (result.Succeeded) return RedirectToAction("LoggedIn");
 
@@ -48,7 +48,7 @@ namespace Website.Areas.Authorization.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Register(RegisterViewModel aRegisterViewModel)
+        public async Task<IActionResult> Register(RegisterForm aRegisterViewModel)
         {
             if (!ModelState.IsValid) return View(aRegisterViewModel);
 
@@ -58,7 +58,7 @@ namespace Website.Areas.Authorization.Controllers
 
         public async Task<IActionResult> Logout()
         {
-            await _authorizeService.LogoutUserAsync();
+            await _authorizeService.SignOutUserAsync();
             return View("Login");
         }
 

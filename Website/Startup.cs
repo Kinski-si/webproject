@@ -39,7 +39,7 @@ namespace Website
                 new AutoMapper.MapperConfiguration(cfgr =>
                     cfgr.AddProfile(new AutoMapperConfiguration())).CreateMapper());
             services.AddScoped<IAuthorizeService, AuthorizeService>();
-            services.AddScoped<IManageService, ManageService>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IDbRepository, DbRepository>();
             services.AddAuthorization();
             services.AddMemoryCache();

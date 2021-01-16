@@ -1,9 +1,0 @@
-D:\webproject\Website.DAL.Contacts\bin\Debug\netstandard2.0\Website.DAL.Contacts.deps.json
-D:\webproject\Website.DAL.Contacts\bin\Debug\netstandard2.0\Website.DAL.Contacts.dll
-D:\webproject\Website.DAL.Contacts\bin\Debug\netstandard2.0\Website.DAL.Contacts.pdb
-D:\webproject\Website.DAL.Contacts\obj\Debug\netstandard2.0\Website.DAL.Contacts.csprojAssemblyReference.cache
-D:\webproject\Website.DAL.Contacts\obj\Debug\netstandard2.0\Website.DAL.Contacts.AssemblyInfoInputs.cache
-D:\webproject\Website.DAL.Contacts\obj\Debug\netstandard2.0\Website.DAL.Contacts.AssemblyInfo.cs
-D:\webproject\Website.DAL.Contacts\obj\Debug\netstandard2.0\Website.DAL.Contacts.csproj.CoreCompileInputs.cache
-D:\webproject\Website.DAL.Contacts\obj\Debug\netstandard2.0\Website.DAL.Contacts.dll
-D:\webproject\Website.DAL.Contacts\obj\Debug\netstandard2.0\Website.DAL.Contacts.pdb

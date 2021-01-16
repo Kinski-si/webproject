@@ -17,9 +17,9 @@ namespace Website.DAL.Implementations
             _context = context;
         }
 
-        public IQueryable<T> Get<T>() where T : class, IEntity
+        public async Task<T> Get<T>(Guid aId) where T : class, IEntity
         {
-            return _context.Set<T>().AsQueryable();
+            return await _context.Set<T>().AsQueryable().SingleAsync(x => x.Id.Equals(aId));
         }
 
         public async Task<Guid> Add<T>(T newEntity) where T : class, IEntity
@@ -33,10 +33,11 @@ namespace Website.DAL.Implementations
             await _context.Set<T>().AddRangeAsync(newEntities);
         }
 
-        public async Task Delete<T>(Guid id) where T : class, IEntity
+        public async Task Remove<T>(Guid id) where T : class, IEntity
         {
-            var activeEntity = await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
-            await Task.Run(() => _context.Update(activeEntity));
+            var objects = _context.Set<T>();
+            var activeEntity = await objects.SingleAsync(x => x.Id == id);
+            await Task.Run(() => objects.Remove(activeEntity));
         }
 
         public async Task Remove<T>(T entity) where T : class, IEntity

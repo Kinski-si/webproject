@@ -10,9 +10,9 @@ namespace Website.Areas.Manage.Controllers
     [Area("Manage")]
     public class AdminController : Controller
     {
-        private readonly IManageService _manageService;
+        private readonly IProductService _manageService;
 
-        public AdminController(IManageService aManageService)
+        public AdminController(IProductService aManageService)
         {
             _manageService = aManageService;
         }

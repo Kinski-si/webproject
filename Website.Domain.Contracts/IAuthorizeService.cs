@@ -7,9 +7,9 @@ namespace Website.Domain.Contracts
 {
     public interface IAuthorizeService
     {
-        Task RegisterUserAsync(RegisterViewModel aRegisterViewModel); 
-        Task LogoutUserAsync();
-        Task<EntityUser> FindByModelAsync(LoginViewModel aLoginViewModel);
-        Task<SignInResult> LogInUserAsync(EntityUser aEntityUser, LoginViewModel aLoginViewModel);
+        Task RegisterUserAsync(RegisterForm aRegisterViewModel); 
+        Task SignOutUserAsync();
+        Task<EntityUser> FindUser(LoginForm aLoginViewModel);
+        Task<SignInResult> SignInUserAsync(EntityUser aEntityUser, LoginForm aLoginViewModel);
     }
 }

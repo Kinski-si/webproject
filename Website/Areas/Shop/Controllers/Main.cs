@@ -6,9 +6,9 @@ namespace Website.Areas.Shop.Controllers
     [Area("Shop")]
     public class Main : Controller
     {
-        private readonly IManageService _manageService;
+        private readonly IProductService _manageService;
 
-        public Main(IManageService aManageService)
+        public Main(IProductService aManageService)
         {
             _manageService = aManageService;
         }

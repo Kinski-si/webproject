@@ -8,7 +8,7 @@ namespace Website
     {
         public AutoMapperConfiguration()
         {
-            CreateMap<RegisterViewModel, EntityUser>();
+            CreateMap<RegisterForm, EntityUser>();
             CreateMap<Category, EntityCategory>().ReverseMap();
             CreateMap<Clothes, EntityClothes>();
         }
