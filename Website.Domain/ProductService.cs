@@ -27,6 +27,11 @@ namespace Website.Domain.Implementations
             await _dbRepository.SaveChangesAsync();
         }
 
+        public async Task RemoveCategory(Guid aCategoryId)
+        {
+            await _dbRepository.Remove<EntityCategory>(aCategoryId);
+        }
+
         public IEnumerable<Category> GetCategories()
         {
             return _mapper.Map<IEnumerable<EntityCategory>, IEnumerable<Category>>(
@@ -38,6 +43,15 @@ namespace Website.Domain.Implementations
             var category = await _dbRepository.Get<EntityCategory>(aCategoryId);
             category.Product.Add(_mapper.Map<Product, EntityProduct>(aProduct));
             await _dbRepository.Update(category);
+            await _dbRepository.SaveChangesAsync();
+        }
+
+        public async Task RemoveProduct(Guid aCategoryId, Product aProduct)
+        {
+            var category = await _dbRepository.Get<EntityCategory>(aCategoryId);
+            category.Product.Remove(_mapper.Map<Product, EntityProduct>(aProduct));
+            await _dbRepository.Update(category);
+            await _dbRepository.SaveChangesAsync();
         }
     }
 }

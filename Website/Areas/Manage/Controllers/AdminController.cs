@@ -19,7 +19,7 @@ namespace Website.Areas.Manage.Controllers
 
         public IActionResult Main()
         {
-            return View();
+            return View(_manageService.GetCategories());
         }
 
         public IActionResult CreateCategory()
@@ -32,6 +32,12 @@ namespace Website.Areas.Manage.Controllers
         {
             _manageService.AddCategory(aCategory);
             return RedirectToAction("Main", "Admin");
+        }
+
+        [HttpPost]
+        public IActionResult CreateProduct(Product aProduct)
+        {
+            return RedirectToAction("Main", _manageService.GetCategories());
         }
     }
 }
