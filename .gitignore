@@ -26,7 +26,6 @@ Website/.vs/Website/v16/.suo
 *.cache
 Website.Domain.Contracts/bin/Debug/netstandard2.0/Website.Domain.Contracts.dll
 Website.Domain.Contracts/bin/Debug/netstandard2.0/Website.Domain.Contracts.pdb
-Website.Domain.Contracts/Models/Basket.cs
 Website.Domain.Contracts/obj/Debug/netstandard2.0/Website.Domain.Contracts.dll
 Website.Domain.Contracts/obj/Debug/netstandard2.0/Website.Domain.Contracts.pdb
 Website.Domain/bin/Debug/netstandard2.0/Website.Domain.Contracts.dll
@@ -78,7 +77,6 @@ Website/obj/Debug/netcoreapp3.1/Website.Views.dll
 Website/obj/Debug/netcoreapp3.1/Website.Views.pdb
 Website.Domain.Contracts/bin/Debug/netstandard2.0/Website.Domain.Contracts.dll
 Website.Domain.Contracts/bin/Debug/netstandard2.0/Website.Domain.Contracts.pdb
-Website.Domain.Contracts/Models/Basket.cs
 Website.Domain.Contracts/obj/Debug/netstandard2.0/Website.Domain.Contracts.dll
 Website.Domain.Contracts/obj/Debug/netstandard2.0/Website.Domain.Contracts.pdb
 Website.Domain/bin/Debug/netstandard2.0/Website.Domain.Contracts.dll
@@ -114,4 +112,3 @@ Website.DAL.Implemetations/obj/
 Website.DAL.Migrations/obj/ 
 Website.Domain/obj/ 
 Website.Domain.Contracts/obj/
-Website.Domain/AuthorizeService.cs
