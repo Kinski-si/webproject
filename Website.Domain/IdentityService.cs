@@ -8,14 +8,14 @@ using Website.Domain.Contracts.Models;
 
 namespace Website.Domain.Implementations
 {
-    public class AuthorizeService : IAuthorizeService
+    public class IdentityService : IIdentityService
     {
         private readonly Context _context;
         private readonly IMapper _mapper;
         private readonly UserManager<EntityUser> _userManager;
         private readonly SignInManager<EntityUser> _signInManager;
 
-        public AuthorizeService(Context aContext, IMapper aMapper, UserManager<EntityUser> aUserManager,
+        public IdentityService(Context aContext, IMapper aMapper, UserManager<EntityUser> aUserManager,
             SignInManager<EntityUser> aSignInManager)
         {
             _context = aContext;

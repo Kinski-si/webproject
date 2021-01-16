@@ -10,9 +10,9 @@ namespace Website.Areas.Authorization.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private readonly IAuthorizeService _authorizeService;
+        private readonly IIdentityService _authorizeService;
 
-        public HomeController(IAuthorizeService aAuthorizeService)
+        public HomeController(IIdentityService aAuthorizeService)
         {
             _authorizeService = aAuthorizeService;
         }

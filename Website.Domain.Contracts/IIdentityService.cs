@@ -5,7 +5,7 @@ using Website.Domain.Contracts.Models;
 
 namespace Website.Domain.Contracts
 {
-    public interface IAuthorizeService
+    public interface IIdentityService
     {
         Task RegisterUserAsync(RegisterForm aRegisterViewModel); 
         Task SignOutUserAsync();

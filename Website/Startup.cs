@@ -38,7 +38,7 @@ namespace Website
             services.AddSingleton(
                 new AutoMapper.MapperConfiguration(cfgr =>
                     cfgr.AddProfile(new AutoMapperConfiguration())).CreateMapper());
-            services.AddScoped<IAuthorizeService, AuthorizeService>();
+            services.AddScoped<IIdentityService, IdentityService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IDbRepository, DbRepository>();
             services.AddAuthorization();
