@@ -112,3 +112,8 @@ Website.DAL.Implemetations/obj/
 Website.DAL.Migrations/obj/ 
 Website.Domain/obj/ 
 Website.Domain.Contracts/obj/
+*.v2
+*.testlog
+*.v2
+*.v2
+Website/.vs/Website/v16/TestStore/0/testlog.manifest

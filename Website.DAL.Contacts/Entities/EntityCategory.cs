@@ -8,6 +8,6 @@ namespace Website.DAL.Contacts.Entities
 
         public string CategoryDescription { get; set; }
 
-        public IEnumerable<EntityClothes> Clothes { get; set; }
+        public List<EntityProduct> Product { get; set; }
     }
 }

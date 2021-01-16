@@ -8,6 +8,6 @@ namespace Website.Domain.Contracts.Models
 
         public string CategoryDescription { get; set; }
 
-        public IEnumerable<Clothes> Clothes { get; set; }
+        public IEnumerable<Product> Product { get; set; }
     }
 }

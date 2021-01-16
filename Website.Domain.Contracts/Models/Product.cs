@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Website.Domain.Contracts.Models
 {
-    public class Clothes : ModelBase
+    public class Product : ModelBase
     {
         [Required(ErrorMessage = "Имя товара не может быть пустым")]
         [StringLength(20)]

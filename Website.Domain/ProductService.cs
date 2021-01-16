@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Website.DAL.Contacts;
@@ -30,6 +31,13 @@ namespace Website.Domain.Implementations
         {
             return _mapper.Map<IEnumerable<EntityCategory>, IEnumerable<Category>>(
                 _dbRepository.GetAll<EntityCategory>());
+        }
+
+        public async Task AddProduct(Guid aCategoryId, Product aProduct)
+        {
+            var category = await _dbRepository.Get<EntityCategory>(aCategoryId);
+            category.Product.Add(_mapper.Map<Product, EntityProduct>(aProduct));
+            await _dbRepository.Update(category);
         }
     }
 }

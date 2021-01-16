@@ -1,6 +1,6 @@
 ﻿namespace Website.DAL.Contacts.Entities
 {
-    public class EntityClothes : EntityBase
+    public class EntityProduct : EntityBase
     {
         public string Name { get; set; }
 

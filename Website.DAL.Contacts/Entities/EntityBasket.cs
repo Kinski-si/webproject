@@ -6,6 +6,6 @@ namespace Website.DAL.Contacts.Entities
     {
         public float TotalPrice { get; set; }
 
-        public IEnumerable<EntityClothes> Clothes { get; set; }
+        public IEnumerable<EntityProduct> Clothes { get; set; }
     }
 }

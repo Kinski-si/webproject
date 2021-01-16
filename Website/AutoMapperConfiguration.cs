@@ -10,7 +10,7 @@ namespace Website
         {
             CreateMap<RegisterForm, EntityUser>();
             CreateMap<Category, EntityCategory>().ReverseMap();
-            CreateMap<Clothes, EntityClothes>();
+            CreateMap<Product, EntityProduct>();
         }
     }
 }

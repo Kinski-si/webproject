@@ -6,7 +6,7 @@
     <br/>
     <a>@category.CategoryDescription</a>
     <br/>
-    foreach (var cloth in @category?.Clothes ?? Enumerable.Empty<Clothes>())
+    foreach (var cloth in @category?.Product ?? Enumerable.Empty<Product>())
     {
         <a>@cloth.CategoryName</a>
         <a>@cloth.Img</a>

@@ -6,6 +6,6 @@ namespace Website.Domain.Contracts.Models
     {
         public float TotalPrice { get; set; }
         
-        public IEnumerable<Clothes> Clothes { get; set; }
+        public IEnumerable<Product> Clothes { get; set; }
     }
 }   
