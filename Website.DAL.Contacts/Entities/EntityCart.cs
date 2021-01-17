@@ -2,7 +2,7 @@
 
 namespace Website.DAL.Contacts.Entities
 {
-    public class EntityBasket : EntityBase
+    public class EntityCart : EntityBase
     {
         public float TotalPrice { get; set; }
 

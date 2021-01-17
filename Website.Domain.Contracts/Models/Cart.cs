@@ -2,7 +2,7 @@
 
 namespace Website.Domain.Contracts.Models
 {
-    public class Basket : ModelBase
+    public class Cart : ModelBase
     {
         public float TotalPrice { get; set; }
         

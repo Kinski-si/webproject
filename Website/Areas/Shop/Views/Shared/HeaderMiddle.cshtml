@@ -52,10 +52,17 @@
                             <a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a>
                         </li>
                         <li>
-                            <a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a>
+                            <a asp-action="Cart" asp-controller="Buy"><i class="fa fa-shopping-cart"></i> Cart</a>
                         </li>
                         <li>
-                            <a href="login.html"><i class="fa fa-lock"></i> Login</a>
+                            @if (!User.Identity.IsAuthenticated)
+                            {
+                                <a asp-action="Login" asp-controller="Identity" class="active">Login</a>
+                            }
+                            else
+                            {
+                                <a asp-action="Cart" asp-controller="Buy" class="active">Login</a>
+                            }
                         </li>
                     </ul>
                 </div>

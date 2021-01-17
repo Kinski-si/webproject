@@ -33,7 +33,7 @@ namespace Website
             services.AddMvc();
             services.ConfigureApplicationCookie(option =>
             {
-                option.LoginPath = "/Shop/Login/LoginView";
+                option.LoginPath = "/Shop/Identity/Identity";
                 option.AccessDeniedPath = "/Authorization/Home/Denied";
             });
             services.AddSingleton(
@@ -49,12 +49,16 @@ namespace Website
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
+            app.UseStaticFiles();
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseStaticFiles();
             app.UseSession();
 
             app.UseEndpoints(endpoints =>

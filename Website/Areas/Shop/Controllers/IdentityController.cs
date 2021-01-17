@@ -26,11 +26,13 @@ namespace Website.Areas.Shop.Controllers
             {
                 return RedirectToAction("Identity", aAuthorizeForm);
             }
+
             await _identityService.RegisterUserAsync(aAuthorizeForm.RegisterForm);
             return RedirectToAction("Identity");
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(AuthorizeForm aAuthorizeForm)
         {
             if (!ModelState.IsValid)

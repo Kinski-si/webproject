@@ -28,10 +28,17 @@
                                     <a href="checkout.html">Checkout</a>
                                 </li>
                                 <li>
-                                    <a href="cart.html">Cart</a>
+                                    <a asp-action="Cart" asp-controller="Buy">Cart</a>
                                 </li>
                                 <li>
-                                    <a href="login.html" class="active">Login</a>
+                                    @if (!User.Identity.IsAuthenticated)
+                                    {
+                                        <a asp-action="Login" asp-controller="Identity" class="active">Login</a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-action="Cart" asp-controller="Buy" class="active">Login</a>
+                                    }
                                 </li>
                             </ul>
                         </li>
@@ -47,9 +54,6 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="404.html">404</a>
-                        </li>
-                        <li>
                             <a href="contact-us.html">Contact</a>
                         </li>
                     </ul>
@@ -57,7 +61,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="search_box pull-right">
-                    <input type="text" placeholder="Search" />
+                    <input type="text" placeholder="Search"/>
                 </div>
             </div>
         </div>
