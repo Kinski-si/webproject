@@ -9,9 +9,9 @@ namespace Website.Areas.Shop.Controllers
     {
         private readonly IIdentityService _identityService;
 
-        public IdentityController(IIdentityService aIdentityService, AuthorizeForm aAuthorizeForm)
+        public IdentityController(IIdentityService identityService)
         {
-            _identityService = aIdentityService;
+            _identityService = identityService;
         }
 
         public IActionResult Identity()

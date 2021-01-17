@@ -28,6 +28,47 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\admin page\.browserslistrc" />
+    <None Include="wwwroot\admin page\.gitignore" />
+    <None Include="wwwroot\admin page\.travis.yml" />
+    <None Include="wwwroot\admin page\dist\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\admin page\dist\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\admin page\dist\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\admin page\dist\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\admin page\dist\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\admin page\dist\js\scripts.js" />
+    <None Include="wwwroot\admin page\scripts\build-assets.js" />
+    <None Include="wwwroot\admin page\scripts\build-pug.js" />
+    <None Include="wwwroot\admin page\scripts\build-scripts.js" />
+    <None Include="wwwroot\admin page\scripts\build-scss.js" />
+    <None Include="wwwroot\admin page\scripts\clean.js" />
+    <None Include="wwwroot\admin page\scripts\render-assets.js" />
+    <None Include="wwwroot\admin page\scripts\render-pug.js" />
+    <None Include="wwwroot\admin page\scripts\render-scripts.js" />
+    <None Include="wwwroot\admin page\scripts\render-scss.js" />
+    <None Include="wwwroot\admin page\scripts\sb-watch.js" />
+    <None Include="wwwroot\admin page\scripts\start-debug.js" />
+    <None Include="wwwroot\admin page\scripts\start.js" />
+    <None Include="wwwroot\admin page\src\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\admin page\src\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\admin page\src\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\admin page\src\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\admin page\src\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\admin page\src\js\scripts.js" />
+    <None Include="wwwroot\admin page\src\scss\layout\_authentication.scss" />
+    <None Include="wwwroot\admin page\src\scss\layout\_dashboard-default.scss" />
+    <None Include="wwwroot\admin page\src\scss\layout\_dashboard-fixed.scss" />
+    <None Include="wwwroot\admin page\src\scss\layout\_error.scss" />
+    <None Include="wwwroot\admin page\src\scss\navigation\sidenav\_sidenav-dark.scss" />
+    <None Include="wwwroot\admin page\src\scss\navigation\sidenav\_sidenav-light.scss" />
+    <None Include="wwwroot\admin page\src\scss\navigation\sidenav\_sidenav.scss" />
+    <None Include="wwwroot\admin page\src\scss\navigation\_nav.scss" />
+    <None Include="wwwroot\admin page\src\scss\navigation\_topnav.scss" />
+    <None Include="wwwroot\admin page\src\scss\styles.scss" />
+    <None Include="wwwroot\admin page\src\scss\variables\_navigation.scss" />
+    <None Include="wwwroot\admin page\src\scss\variables\_spacing.scss" />
+    <None Include="wwwroot\admin page\src\scss\_global.scss" />
+    <None Include="wwwroot\admin page\src\scss\_variables.scss" />
     <None Include="wwwroot\shop\fonts\fontawesome-webfont.svg" />
     <None Include="wwwroot\shop\fonts\glyphicons-halflings-regular.svg" />
     <None Include="wwwroot\shop\js\bootstrap.min.js" />
@@ -42,6 +83,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Manage\Data\" />
+    <Folder Include="Areas\Manage\Models\" />
     <Folder Include="Areas\Shop\Data\" />
     <Folder Include="Areas\Shop\Models\" />
   </ItemGroup>
