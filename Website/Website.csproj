@@ -28,8 +28,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Manage\Data\" />
-    <Folder Include="Areas\Manage\Models\" />
+    <None Include="wwwroot\shop\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\shop\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\shop\js\bootstrap.min.js" />
+    <None Include="wwwroot\shop\js\contact.js" />
+    <None Include="wwwroot\shop\js\gmaps.js" />
+    <None Include="wwwroot\shop\js\html5shiv.js" />
+    <None Include="wwwroot\shop\js\jquery.js" />
+    <None Include="wwwroot\shop\js\jquery.prettyPhoto.js" />
+    <None Include="wwwroot\shop\js\jquery.scrollUp.min.js" />
+    <None Include="wwwroot\shop\js\main.js" />
+    <None Include="wwwroot\shop\js\price-range.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Areas\Shop\Data\" />
     <Folder Include="Areas\Shop\Models\" />
   </ItemGroup>

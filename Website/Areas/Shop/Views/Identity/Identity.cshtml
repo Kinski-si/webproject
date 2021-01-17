@@ -1,0 +1,41 @@
+﻿@model Website.Domain.Contracts.Models.AuthorizeForm
+
+<section id="form">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form">
+                    <h2>Войти в ваш аккаунт</h2>
+
+                    <form asp-action="Login" method="post">
+                        <input type="text" placeholder="Ваше имя" asp-for="LoginForm.Name"/>
+                        <input type="email" placeholder="Пароль" asp-for="LoginForm.Password"/>
+                        <span>
+                            <input type="checkbox" class="checkbox" asp-for="LoginForm.RememberMe">
+                            Keep me signed in
+                        </span>
+                        <button type="submit" class="btn btn-default">Войти</button>
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">Или</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="signup-form">
+                    <h2>Зарегистрироваться</h2>
+
+                    <form asp-action="Register" method="post">
+                        <input type="text" placeholder="Ваше имя" asp-for="RegisterForm.UserName"/>
+                        <input type="email" placeholder="Ваш емейл-адресс" asp-for="RegisterForm.Email"/>
+                        <input type="password" placeholder="Пароль" asp-for="RegisterForm.Password"/>
+                        <input type="password" placeholder="Подтвердите пароль" asp-for="RegisterForm.ConfirmPassword"/>
+                        <button type="submit" class="btn btn-default">Зарегистрировать новый аккаунт</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

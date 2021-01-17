@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login | E-Shopper</title>
+    <link href="/shop/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/shop/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/shop/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/shop/css/price-range.css" rel="stylesheet">
+    <link href="/shop/css/animate.css" rel="stylesheet">
+    <link href="/shop/css/main.css" rel="stylesheet">
+    <link href="/shop/css/responsive.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header id="header">
+    @await Html.PartialAsync("HeaderTop")
+    @await Html.PartialAsync("HeaderMiddle")
+    @await Html.PartialAsync("HeaderBottom")
+</header>
+@RenderBody()
+<footer id="footer">
+    @await Html.PartialAsync("FooterTop")
+    @await Html.PartialAsync("FooterWidget")
+    @await Html.PartialAsync("FooterBottom")
+</footer>
+
+  
+<script src="/shop/js/jquery.js"></script>
+<script src="/shop/js/price-range.js"></script>
+<script src="/shop/js/jquery.scrollUp.min.js"></script>
+<script src="/shop/js/bootstrap.min.js"></script>
+<script src="/shop/js/jquery.prettyPhoto.js"></script>
+<script src="/shop/js/main.js"></script>
+</body>

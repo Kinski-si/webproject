@@ -9,6 +9,7 @@ using Website.DAL.Contacts;
 using Website.DAL.Contacts.Entities;
 using Website.DAL.Implementations;
 using Website.Domain.Contracts;
+using Website.Domain.Contracts.Models;
 using Website.Domain.Implementations;
 
 namespace Website
@@ -32,16 +33,17 @@ namespace Website
             services.AddMvc();
             services.ConfigureApplicationCookie(option =>
             {
-                option.LoginPath = "/Authorization/Home/Login";
+                option.LoginPath = "/Shop/Login/LoginView";
                 option.AccessDeniedPath = "/Authorization/Home/Denied";
             });
             services.AddSingleton(
-                new AutoMapper.MapperConfiguration(cfgr =>
-                    cfgr.AddProfile(new AutoMapperConfiguration())).CreateMapper());
+                new AutoMapper.MapperConfiguration(configuration =>
+                    configuration.AddProfile(new AutoMapperConfiguration())).CreateMapper());
             services.AddScoped<IIdentityService, IdentityService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IDbRepository, DbRepository>();
             services.AddAuthorization();
+            services.AddScoped<AuthorizeForm>();
             services.AddMemoryCache();
         }
 
@@ -57,7 +59,7 @@ namespace Website
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("default", "{area=Authorization}/{controller=Home}/{action=Login}");
+                endpoints.MapControllerRoute("default", "{area=Shop}/{controller=Identity}/{action=Identity}");
             });
         }
     }
